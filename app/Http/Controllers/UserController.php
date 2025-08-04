@@ -8,8 +8,9 @@ class UserController extends Controller
 {
     //
 
-    
-    public function index(){
-        return 'Hola usuario Sea bienvenido ';
+
+    public function index()
+    {
+        return '<h1>Hola usuario sea bienvenido</h1>';
     }
 }
