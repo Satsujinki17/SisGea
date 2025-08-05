@@ -9,8 +9,8 @@ class UserController extends Controller
     //
 
 
-    public function index()
+    public function WelcomeUser()
     {
-        return '<h1>Hola usuario sea bienvenido</h1>';
+        return '<h1>Hola Usuario</h1>';
     }
 }
