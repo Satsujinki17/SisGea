@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
+
+    //Solo se usa el invoke cuando el controlador tenga un solo metodo
+    public function __invoke()
+    {
         return '<h1>Hola usuario sea bienvenido</h1>';
     }
 }

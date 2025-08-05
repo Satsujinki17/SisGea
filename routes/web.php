@@ -7,25 +7,25 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
-    return view('welcome');  
+    return view('welcome');
 });
 
 
-Route::get('/users', [HomeController::class, 'index']);
+Route::get('/hello', function () {
 
+});
 
+Route::get('/users', [HomeController::class]);
 
 //Rutas con parametros. Su funcion es crear una unica ruta quie permita acceder a diferentes contenidos variables
 Route::get('/users/{id}', function ($id) {
     return "Aqui se muestra el id {$id}";
 });
 
-
 //Rutas con varios parametros
 Route::get('/users/{id}/{page}', function ($id, $page) {
     return "Aqui se muestra el id {$id} y el perfil del usuario {$page}";
 });
-
 
 //Rutas con parametros opcionales
 Route::get('/users/{id}/{page?}', function ($id, $page = null) {
@@ -33,7 +33,6 @@ Route::get('/users/{id}/{page?}', function ($id, $page = null) {
         return "Aqui se muestra el id {$id} y el perfil del usuario {$page}";
     }
 });
-
 
 //El oden de las URL importa ya que las rutas se muestran en cascada
 Route::get('/users/hola', function ($id, $page = null) {
@@ -59,4 +58,6 @@ Ruta::Peticion('URl', funcion() {
 Se jhace una peticion a la aplicacion, est llega hasta esta ruta aqui
 comprueba que ruta coincide con que url y dependiendo de eso retorna esa vista
 
+
+composer require inertiajs/inertia-laravel -vvv
 */
