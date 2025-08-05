@@ -3,11 +3,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use Inertia\Inertia;
 
 Route::get('/', function () {
-    return view('welcome');
+    return Inertia::render('Home');
 });
 
 
@@ -57,6 +57,7 @@ Ruta::Peticion('URl', funcion() {
 
 Se jhace una peticion a la aplicacion, est llega hasta esta ruta aqui
 comprueba que ruta coincide con que url y dependiendo de eso retorna esa vista
+
 
 
 composer require inertiajs/inertia-laravel -vvv
